@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+
+  hkx-db:
+    container_name: hkx-db
+    build:
+      context: ops
+      dockerfile: mongo/Dockerfile
+    expose:
+      - 27017
+
+  hkx-back:
+    container_name: hkx-back
+    build:
+      context: ops
+      dockerfile: back/Dockerfile
+    volumes:
+      - ./back:/var/www/hkx:rw
+    links:
+      - hkx-db
+    ports:
+      - 127.0.0.1:1337:1337
+
+  hkx-front:
+    container_name: hkx-front
+    build:
+      context: ops
+      dockerfile: front/Dockerfile
+    volumes:
+      - ./front:/var/www/hkx:rw
+    ports:
+      - 127.0.0.1:8100:8100

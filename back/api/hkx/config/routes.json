@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hkx",
+      "handler": "Hkx.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hkx/count",
+      "handler": "Hkx.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hkx/:_id",
+      "handler": "Hkx.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/hkx",
+      "handler": "Hkx.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hkx/:_id",
+      "handler": "Hkx.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hkx/:_id",
+      "handler": "Hkx.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
