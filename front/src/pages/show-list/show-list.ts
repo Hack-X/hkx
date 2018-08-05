@@ -3,6 +3,8 @@ import {Config, NavController} from 'ionic-angular';
 import {ShowService} from '../../providers/show-service-rest';
 import {ShowDetailPage} from '../show-detail/show-detail';
 import leaflet from 'leaflet';
+import {SERVER_URL} from '../../providers/config';
+
 
 @Component({
     selector: 'page-show-list',
@@ -16,6 +18,7 @@ export class ShowListPage {
     viewMode: string = "list";
     map;
     markersGroup;
+    serverUrl = SERVER_URL;
 
     constructor(public navCtrl: NavController, public service: ShowService, public config: Config) {
         this.findAll();

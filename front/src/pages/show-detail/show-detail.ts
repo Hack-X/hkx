@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ActionSheetController, ActionSheet, NavController, NavParams, ToastController} from 'ionic-angular';
 import {ShowService} from '../../providers/show-service-rest';
+import {SERVER_URL} from '../../providers/config';
 
 @Component({
     selector: 'page-show-detail',
@@ -9,6 +10,7 @@ import {ShowService} from '../../providers/show-service-rest';
 export class ShowDetailPage {
 
     show: any;
+    serverUrl: string = SERVER_URL;
 
     constructor(public actionSheetCtrl: ActionSheetController, public navCtrl: NavController, public navParams: NavParams, public ShowService: ShowService, public toastCtrl: ToastController) {
         this.show = this.navParams.data;

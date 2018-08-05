@@ -12,7 +12,7 @@
         <ion-item-sliding *ngFor="let favorite of favorites">
             <button ion-item (click)="itemTapped(favorite)">
                 <ion-thumbnail item-left>
-                    <img src="{{favorite.show.image}}"/>
+                    <img src="{{serverUrl}}{{favorite.show.image}}"/>
                 </ion-thumbnail>
                 <h2>{{favorite.show.name}}</h2>
                 <p>{{favorite.show.date}} ∙ {{favorite.show.venue}}</p>

@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "booking",
+  "info": {
+    "name": "booking",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "show": {
+      "model": "show"
+    },
+    "seats": {
+      "type": "integer"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  }
+}

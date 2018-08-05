@@ -3,7 +3,7 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 import {SERVER_URL} from './config';
 import 'rxjs/Rx';
 
-let showsURL = SERVER_URL + 'api/shows/';
+let showsURL = SERVER_URL + 'show/';
 
 @Injectable()
 export class ShowService {
@@ -21,7 +21,7 @@ export class ShowService {
     }
 
     findById(id) {
-        return this.http.get(showsURL + "id/" + id)
+        return this.http.get(showsURL + id)
             .map(res => res.json())
             .toPromise();
     }
