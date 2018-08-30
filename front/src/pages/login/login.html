@@ -18,6 +18,10 @@
         <ion-input [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
 
+      <ion-item *ngIf="errorDescription">
+        {{errorDescription.message}}
+      </ion-item>
+
       <ion-item>
         <button ion-button block (click)="login()">
           <ion-icon name="star"></ion-icon> Login

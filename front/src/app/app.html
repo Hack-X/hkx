@@ -22,6 +22,10 @@
         <ion-icon item-left [name]="menuItem.icon"></ion-icon>
         {{menuItem.title}}
       </button>
+      <button menuClose ion-item (click)="logout()">
+        <ion-icon item-left [name]="log-out"></ion-icon>
+        Déconnexion
+      </button>
     </ion-list>
 
   </ion-content>
