@@ -7,6 +7,7 @@ import {ShowListPage} from '../pages/show-list/show-list';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
+import {LoginPage} from '../pages/login/login';
 
 export interface MenuItem {
     title: string;
@@ -20,7 +21,7 @@ export interface MenuItem {
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = WelcomePage;
+    rootPage: any = LoginPage;
 
     appMenuItems: Array<MenuItem>;
 

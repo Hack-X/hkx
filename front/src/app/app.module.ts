@@ -8,9 +8,11 @@ import {WelcomePage} from '../pages/welcome/welcome';
 import {ShowListPage} from '../pages/show-list/show-list';
 import {ShowDetailPage} from '../pages/show-detail/show-detail';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
+import {LoginPage} from '../pages/login/login';
 import {AboutPage} from '../pages/about/about';
 
 import {ShowService} from "../providers/show-service-rest";
+import {UserService} from "../providers/user-service-rest";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ShowListPage,
     ShowDetailPage,
-    FavoriteListPage
+    FavoriteListPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -36,12 +39,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ShowListPage,
     ShowDetailPage,
-    FavoriteListPage
+    FavoriteListPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     ShowService,
+    UserService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

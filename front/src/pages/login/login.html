@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Show Tonight</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-card>
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Username</ion-label>
+        <ion-input [(ngModel)]="identifier" type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button block (click)="login()">
+          <ion-icon name="star"></ion-icon> Login
+        </button>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+</ion-content>
