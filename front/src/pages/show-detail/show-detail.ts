@@ -31,6 +31,22 @@ export class ShowDetailPage {
             });
     }
 
+    unfavorite(show) {
+        this.ShowService.unfavorite(show)
+            .then(show => {
+                let toast = this.toastCtrl.create({
+                    message: 'Show removed from your favorites',
+                    cssClass: 'mytoast',
+                    duration: 1000
+                });
+                toast.present(toast);
+            });
+    }
+
+    canFavorite(show) {
+        return this.ShowService.canFavorite(show);
+    }
+
     share(show) {
         let actionSheet: ActionSheet = this.actionSheetCtrl.create({
             title: 'Share via',

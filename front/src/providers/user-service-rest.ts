@@ -5,8 +5,6 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class UserService {
-  favoriteCounter: number = 0;
-  favorites: Array<any> = [];
 
     constructor(public http: Http) {
         this.http = http;

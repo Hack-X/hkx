@@ -19,7 +19,7 @@
                     <img src="{{serverUrl}}{{show.image.url}}"/>
                 </ion-thumbnail>
                 <h2>{{show.name}}</h2>
-                <p>{{show.date}}</p>
+                <p>{{ show.date | date: 'd MMMM yyyy' }}</p>
             </button>
             <ion-item-options>
                 <button danger (click)="deleteItem(show)">Delete</button>

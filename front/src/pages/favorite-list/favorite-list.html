@@ -9,16 +9,16 @@
 
 <ion-content>
     <ion-list>
-        <ion-item-sliding *ngFor="let favorite of favorites">
-            <button ion-item (click)="itemTapped(favorite)">
+        <ion-item-sliding *ngFor="let show of favorites">
+            <button ion-item (click)="itemTapped(show)">
                 <ion-thumbnail item-left>
-                    <img src="{{serverUrl}}{{favorite.show.image}}"/>
+                    <img src="{{serverUrl}}{{show.image.url}}"/>
                 </ion-thumbnail>
-                <h2>{{favorite.show.name}}</h2>
-                <p>{{favorite.show.date}} ∙ {{favorite.show.venue}}</p>
+                <h2>{{show.name}}</h2>
+                <p>{{show.date | date: 'd MMMM yyyy' }} ∙ {{show.venue}}</p>
             </button>
             <ion-item-options>
-                <button danger (click)="deleteItem(favorite)">Delete</button>
+                <button danger (click)="deleteItem(show)">Delete</button>
             </ion-item-options>
         </ion-item-sliding>
     </ion-list>

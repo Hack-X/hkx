@@ -17,12 +17,12 @@ export class FavoriteListPage {
         this.getFavorites();
     }
 
-    itemTapped(favorite) {
-        this.navCtrl.push(ShowDetailPage, favorite.show);
+    itemTapped(show) {
+        this.navCtrl.push(ShowDetailPage, show);
     }
 
-    deleteItem(favorite) {
-        this.service.unfavorite(favorite)
+    deleteItem(show) {
+        this.service.unfavorite(show)
             .then(() => {
                 this.getFavorites();
             })

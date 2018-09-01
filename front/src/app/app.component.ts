@@ -22,24 +22,16 @@ export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
     rootPage: any = LoginPage;
-
-    appMenuItems: Array<MenuItem>;
-
-    helpMenuItems: Array<MenuItem>;
+    pages: any;
 
     constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
         this.initializeApp();
-
-        this.appMenuItems = [
-            {title: 'Shows', component: ShowListPage, icon: 'bonfire'},
-            {title: 'Favorites', component: FavoriteListPage, icon: 'star'}
-        ];
-
-        this.helpMenuItems = [
-            {title: 'Welcome', component: WelcomePage, icon: 'bookmark'},
-            {title: 'About', component: AboutPage, icon: 'information-circle'},
-        ];
-
+        this.pages = {
+            WelcomePage: WelcomePage,
+            FavoriteListPage: FavoriteListPage,
+            AboutPage: AboutPage,
+            ShowListPage: ShowListPage
+        }
     }
 
     initializeApp() {
@@ -56,9 +48,9 @@ export class MyApp {
         this.nav.setRoot(LoginPage);
     }
 
-    openPage(page) {
+    openPage(component) {
         // Reset the content nav to have just this page
         // we wouldn't want the back button to show in this scenario
-        this.nav.setRoot(page.component);
+        this.nav.setRoot(component);
     }
 }

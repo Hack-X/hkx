@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers, RequestOptions} from '@angular/http';
+import {Http} from '@angular/http';
 import {SERVER_URL} from './config';
 import 'rxjs/Rx';
 
@@ -7,7 +7,6 @@ let showsURL = SERVER_URL + 'show/';
 
 @Injectable()
 export class ShowService {
-  favoriteCounter: number = 0;
   favorites: Array<any> = [];
 
     constructor(public http: Http) {
@@ -30,14 +29,19 @@ export class ShowService {
         return Promise.resolve(this.favorites);
     }
 
+    canFavorite(show) {
+        console.log(show);
+        console.log(this.favorites);
+        return this.favorites.map(s => s._id).indexOf(show._id) === -1;
+    }
+
     favorite(show) {
-        this.favoriteCounter = this.favoriteCounter + 1;
-        this.favorites.push({id: this.favoriteCounter, show: show});
+        this.favorites.push(show);
         return Promise.resolve();
     }
 
-    unfavorite(favorite) {
-        let index = this.favorites.indexOf(favorite);
+    unfavorite(show) {
+        let index = this.favorites.map(s => s._id).indexOf(show._id);
         if (index > -1) {
           this.favorites.splice(index, 1);
         }

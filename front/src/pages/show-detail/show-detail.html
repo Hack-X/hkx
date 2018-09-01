@@ -15,7 +15,7 @@
             <ion-item>
                 <ion-icon item-left name="clock"></ion-icon>
                 <h3>Date</h3>
-                <ion-note item-right>{{show.date}}</ion-note>
+                <ion-note item-right>{{show.date | date: 'd MMMM yyyy' }}</ion-note>
             </ion-item>
             <ion-item>
                 <ion-icon item-left name="home"></ion-icon>
@@ -35,9 +35,13 @@
         </ion-list>
 
         <ion-item>
-            <button ion-button icon-left (click)="favorite(show)" clear item-left>
+            <button *ngIf="canFavorite(show)" ion-button icon-left (click)="favorite(show)" clear item-left>
                 <ion-icon name="star"></ion-icon>
                 Favorite
+            </button>
+            <button *ngIf="!canFavorite(show)" ion-button icon-left (click)="unfavorite(show)" clear item-left>
+                <ion-icon name="star"></ion-icon>
+                UnFavorite
             </button>
             <button ion-button icon-left (click)="share(show)" clear item-right>
                 <ion-icon name="share"></ion-icon>

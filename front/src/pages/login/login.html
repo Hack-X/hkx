@@ -18,7 +18,7 @@
         <ion-input [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
 
-      <ion-item *ngIf="errorDescription">
+      <ion-item *ngIf="errorDescription.message">
         {{errorDescription.message}}
       </ion-item>
 
