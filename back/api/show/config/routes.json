@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/show",
+      "path": "/shows",
       "handler": "Show.find",
       "config": {
         "policies": []
@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "/show/count",
+      "path": "/shows/count",
       "handler": "Show.count",
       "config": {
         "policies": []
@@ -18,7 +18,7 @@
     },
     {
       "method": "GET",
-      "path": "/show/:_id",
+      "path": "/shows/:_id",
       "handler": "Show.findOne",
       "config": {
         "policies": []
@@ -26,7 +26,7 @@
     },
     {
       "method": "POST",
-      "path": "/show",
+      "path": "/shows",
       "handler": "Show.create",
       "config": {
         "policies": []
@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/show/:_id",
+      "path": "/shows/:_id",
       "handler": "Show.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/show/:_id",
+      "path": "/shows/:_id",
       "handler": "Show.destroy",
       "config": {
         "policies": []

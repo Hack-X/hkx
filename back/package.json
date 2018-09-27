@@ -1,5 +1,5 @@
 {
-  "name": "back",
+  "name": "back2",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application.",
@@ -20,24 +20,24 @@
   },
   "dependencies": {
     "lodash": "4.x.x",
-    "strapi": "3.0.0-alpha.13.0.1",
-    "strapi-hook-mongoose": "3.0.0-alpha.13.0.1"
+    "strapi": "3.0.0-alpha.14.2",
+    "strapi-hook-mongoose": "3.0.0-alpha.14.2"
   },
   "author": {
-    "name": "nathan",
+    "name": "A Strapi developer",
     "email": "",
     "url": ""
   },
   "maintainers": [
     {
-      "name": "nathan",
+      "name": "A Strapi developer",
       "email": "",
       "url": ""
     }
   ],
   "strapi": {
     "packageManager": "npm",
-    "uuid": "378fa58f-dd0f-425c-a5ae-4d6627cd48dc"
+    "uuid": "7fd8b31c-d7f8-4275-b32b-35a145816618"
   },
   "engines": {
     "node": ">= 9.0.0",
