@@ -8,7 +8,7 @@
         "host": "hkx-db",
         "srv": false,
         "port": 27017,
-        "database": "back",
+        "database": "strapi",
         "username": "",
         "password": ""
       },
