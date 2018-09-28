@@ -1,6 +1,6 @@
 FROM node
 
-RUN npm install -g strapi@alpha
+RUN npm install -g strapi@3.0.0-alpha.14.2
 
 WORKDIR /var/www/hkx
-CMD npm install && ./install_plugins.sh && strapi start
+CMD tail -f /dev/null
