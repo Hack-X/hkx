@@ -16,7 +16,7 @@ services:
       context: ops
       dockerfile: back/Dockerfile
     volumes:
-      - ./:/var/www/hkx:rw
+      - ./back:/var/www/hkx:rw
     links:
       - hkx-db
     ports:
