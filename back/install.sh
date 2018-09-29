@@ -10,6 +10,7 @@ if [ ! -e "/var/www/hkx/.isinstalled" ]; then
 	done
 	echo "Running setup..."
 	npm run setup --plugins
+	mkdir ./public/uploads
 	touch .isinstalled
 else
 	echo ".isinstalled file present, not running install"
