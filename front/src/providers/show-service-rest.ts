@@ -3,7 +3,7 @@ import {Http} from '@angular/http';
 import {SERVER_URL} from './config';
 import 'rxjs/Rx';
 
-let showsURL = SERVER_URL + 'show/';
+let showsURL = SERVER_URL + 'shows/';
 
 @Injectable()
 export class ShowService {

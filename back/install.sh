@@ -1,8 +1,16 @@
-npm install
-for i in ./plugins/*
-do 
-	cd $i
+if [ ! -e "/var/www/hkx/.isinstalled" ]; then
+	echo "Installing strapi dependencies..."
 	npm install
-	cd ../..
-done
-npm run setup --plugins
+	for i in ./plugins/*
+	do 
+		echo "Installing $i dependencies..."
+		cd $i
+		npm install
+		cd ../..
+	done
+	echo "Running setup..."
+	npm run setup --plugins
+	touch .isinstalled
+else
+	echo ".isinstalled file present, not running install"
+fi
