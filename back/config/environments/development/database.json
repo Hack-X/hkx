@@ -6,6 +6,7 @@
       "settings": {
         "client": "mongo",
         "host": "hkx-db",
+        "srv": false,
         "port": 27017,
         "database": "strapi",
         "username": "",

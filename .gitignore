@@ -1,6 +1,7 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
+.isinstalled
 *~
 *.sw[mnpcod]
 *.log
@@ -24,9 +25,6 @@ tmp/
 temp/
 hooks/
 platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
 $RECYCLE.BIN/
 back/public/uploads
 

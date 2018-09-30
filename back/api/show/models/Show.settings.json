@@ -10,32 +10,41 @@
   },
   "attributes": {
     "name": {
+      "default": "",
       "type": "string"
     },
     "venue": {
+      "default": "",
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "default": "",
+      "type": "string"
     },
     "capacity": {
+      "default": "",
       "type": "integer"
     },
     "price": {
+      "default": "",
       "type": "integer"
     },
     "image": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "date": {
+      "default": "",
       "type": "date"
     },
     "lat": {
+      "default": "",
       "type": "float"
     },
     "lng": {
+      "default": "",
       "type": "float"
     }
   }
