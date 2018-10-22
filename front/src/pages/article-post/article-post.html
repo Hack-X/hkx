@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar >
+        <ion-title class="header">Snoozie - Apprenez des choses passionnantes en moins de 5 minutes top chrono</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="myview" no-bounce>
+  <ion-card>
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Titre de ton article</ion-label>
+        <ion-input [(ngModel)]="TBC" type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Catégorie</ion-label>
+        <ion-input [(ngModel)]="TBC" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Contenu</ion-label>
+        <ion-input [(ngModel)]="TBC" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input [(ngModel)]="TBC" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="errorDescription.message">
+        {{errorDescription.message}}
+      </ion-item>
+
+      <ion-item>
+        <button ion-button block (click)="login()">
+          <ion-icon name="star"></ion-icon> Je partage ma connaissance
+        </button>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+</ion-content>
+
