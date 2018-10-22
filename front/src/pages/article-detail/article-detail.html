@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Show</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngIf="show.id">
+        <img src="{{serverUrl}}{{show.image.url}}"/>
+        <ion-card-content>
+            <h2 class="card-title">{{show.name}}</h2>
+            <p>{{show.venue}}</p>
+        </ion-card-content>
+        <ion-list>
+            <ion-item>
+                <ion-icon item-left name="clock"></ion-icon>
+                <h3>Date</h3>
+                <ion-note item-right>{{show.date | date: 'd MMMM yyyy' }}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="home"></ion-icon>
+                <h3>Venue</h3>
+                <ion-note item-right>{{show.venue}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="people"></ion-icon>
+                <h3>Capacity</h3>
+                <ion-note item-right>{{show.capacity}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="pricetag"></ion-icon>
+                <h3>Price</h3>
+                <ion-note item-right>{{show.price}}</ion-note>
+            </ion-item>
+        </ion-list>
+
+        <ion-item>
+            <button *ngIf="canFavorite(show)" ion-button icon-left (click)="favorite(show)" clear item-left>
+                <ion-icon name="star"></ion-icon>
+                Favorite
+            </button>
+            <button *ngIf="!canFavorite(show)" ion-button icon-left (click)="unfavorite(show)" clear item-left>
+                <ion-icon name="star"></ion-icon>
+                UnFavorite
+            </button>
+            <button ion-button icon-left (click)="share(show)" clear item-right>
+                <ion-icon name="share"></ion-icon>
+                Share
+            </button>
+        </ion-item>
+
+    </ion-card>
+</ion-content>

@@ -1,8 +1,15 @@
+.butt {
+  background-color: blue;
+  display: inline-block;
+}
+
 page-welcome {
+
 
   font-weight: 300;
 
   ion-slide {
+
 
     position: relative;
     background-size: cover;
@@ -12,8 +19,8 @@ page-welcome {
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: rgba(163, 19, 178, .8);
-      color: #FFFFFF;
+      background-color: rgba(122, 12, 18, .8);
+      color: #FC9;
       padding: 28px 28px 48px 28px;
       font-size: 2.7rem;
       margin-bottom: 0;

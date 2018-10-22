@@ -2,12 +2,11 @@ import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-
-import {ShowListPage} from '../pages/show-list/show-list';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
 import {LoginPage} from '../pages/login/login';
+import {ArticleListPage} from '../pages/article-list/article-list';
 
 export interface MenuItem {
     title: string;
@@ -30,7 +29,7 @@ export class MyApp {
             WelcomePage: WelcomePage,
             FavoriteListPage: FavoriteListPage,
             AboutPage: AboutPage,
-            ShowListPage: ShowListPage
+            ArticleListPage: ArticleListPage
         }
     }
 

@@ -1,20 +1,20 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>Show Tonight</ion-title>
+    <ion-navbar >
+        <ion-title class="header">Snoozie - Apprenez des choses passionnantes en moins de 5 minutes top chrono</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content no-bounce>
+<ion-content class="myview" no-bounce>
   <ion-card>
     <ion-list>
 
       <ion-item>
-        <ion-label fixed>Username</ion-label>
+        <ion-label fixed>Utilisateur</ion-label>
         <ion-input [(ngModel)]="identifier" type="text" value=""></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>Password</ion-label>
+        <ion-label fixed>Mot de passe</ion-label>
         <ion-input [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
 
@@ -24,10 +24,11 @@
 
       <ion-item>
         <button ion-button block (click)="login()">
-          <ion-icon name="star"></ion-icon> Login
+          <ion-icon name="star"></ion-icon> Je me connecte
         </button>
       </ion-item>
 
     </ion-list>
   </ion-card>
 </ion-content>
+

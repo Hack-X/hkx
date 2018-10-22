@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "article",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "default": "",
+      "type": "string"
+    },
+    "Tag": {
+      "default": "",
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Sport",
+        "Musique",
+        "Actualité",
+        "Médecine",
+        "Food",
+        "Cinéma",
+        "Technologie"
+      ]
+    },
+    "Content": {
+      "default": "",
+      "maxLength": 1000,
+      "minLength": 200,
+      "type": "text",
+      "required": true
+    },
+    "Author email": {
+      "default": "",
+      "type": "email",
+      "required": true
+    },
+    "Like": {
+      "default": 0,
+      "type": "integer",
+      "required": true
+    }
+  }
+}

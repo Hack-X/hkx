@@ -5,27 +5,27 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import {WelcomePage} from '../pages/welcome/welcome';
-import {ShowListPage} from '../pages/show-list/show-list';
-import {ShowDetailPage} from '../pages/show-detail/show-detail';
+import {ArticleDetailPage} from '../pages/article-detail/article-detail';
 import {FavoriteListPage} from '../pages/favorite-list/favorite-list';
 import {LoginPage} from '../pages/login/login';
 import {AboutPage} from '../pages/about/about';
 
-import {ShowService} from "../providers/show-service-rest";
+import {ArticleService} from "../providers/article-service-rest";
 import {UserService} from "../providers/user-service-rest";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ArticleListPage } from '../pages/article-list/article-list';
 
 @NgModule({
   declarations: [
     MyApp,
     WelcomePage,
     AboutPage,
-    ShowListPage,
-    ShowDetailPage,
+    ArticleDetailPage,
     FavoriteListPage,
-    LoginPage
+    LoginPage,
+    ArticleListPage
   ],
   imports: [
     BrowserModule,
@@ -37,15 +37,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     WelcomePage,
     AboutPage,
-    ShowListPage,
-    ShowDetailPage,
+    ArticleDetailPage,
     FavoriteListPage,
-    LoginPage
+    LoginPage,
+    ArticleListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ShowService,
+    ArticleService,
     UserService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
