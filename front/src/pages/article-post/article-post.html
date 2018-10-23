@@ -5,40 +5,31 @@
 </ion-header>
 
 <ion-content class="myview" no-bounce>
-  <ion-card>
-    <ion-list>
 
+
+    <form (ngSubmit)="submitForm()">
       <ion-item>
         <ion-label fixed>Titre de ton article</ion-label>
-        <ion-input [(ngModel)]="TBC" type="text" value=""></ion-input>
+        <ion-input [(ngModel)]="article.Title" name="Title" type="text" value=""></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>Catégorie</ion-label>
-        <ion-input [(ngModel)]="TBC" type="text"></ion-input>
+        <ion-input [(ngModel)]="article.Tag" name="Tag" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>Contenu</ion-label>
-        <ion-input [(ngModel)]="TBC" type="text"></ion-input>
+        <ion-input [(ngModel)]="article.Content" name="Content" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>Email</ion-label>
-        <ion-input [(ngModel)]="TBC" type="text"></ion-input>
+        <ion-input [(ngModel)]="article['Author Email']" name="Author Email" type="text"></ion-input>
       </ion-item>
 
-      <ion-item *ngIf="errorDescription.message">
-        {{errorDescription.message}}
-      </ion-item>
+      <button ion-button type="submit" block>Add Todo</button>
+    </form>
 
-      <ion-item>
-        <button ion-button block (click)="login()">
-          <ion-icon name="star"></ion-icon> Je partage ma connaissance
-        </button>
-      </ion-item>
-
-    </ion-list>
-  </ion-card>
 </ion-content>
 

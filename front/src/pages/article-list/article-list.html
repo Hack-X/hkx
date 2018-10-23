@@ -13,16 +13,13 @@
 
     <ion-list *ngIf="viewMode==='list'">
 
-        <ion-item-sliding *ngFor="let show of shows">
-            <button ion-item (click)="openShowDetail(show)">
-                <ion-thumbnail item-left>
-                    <img src="{{serverUrl}}{{show.image.url}}"/>
-                </ion-thumbnail>
-                <h2>{{show.name}}</h2>
-                <p>{{ show.date | date: 'd MMMM yyyy' }}</p>
+        <ion-item-sliding *ngFor="let article of articles">
+            <button ion-item (click)="openArticleDetail(article)">
+                <h2>{{article.Title}}</h2>
+                <p>{{ article.createdAt | date: 'd MMMM yyyy' }}</p>
             </button>
             <ion-item-options>
-                <button danger (click)="deleteItem(show)">Delete</button>
+                <button danger (click)="deleteItem(article)">Delete</button>
             </ion-item-options>
         </ion-item-sliding>
 

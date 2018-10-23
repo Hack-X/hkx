@@ -7,6 +7,7 @@ import {WelcomePage} from '../pages/welcome/welcome';
 import {AboutPage} from '../pages/about/about';
 import {LoginPage} from '../pages/login/login';
 import {ArticleListPage} from '../pages/article-list/article-list';
+import {ArticlePostPage} from '../pages/article-post/article-post';
 
 export interface MenuItem {
     title: string;
@@ -29,7 +30,8 @@ export class MyApp {
             WelcomePage: WelcomePage,
             FavoriteListPage: FavoriteListPage,
             AboutPage: AboutPage,
-            ArticleListPage: ArticleListPage
+            ArticleListPage: ArticleListPage,
+            ArticlePostPage: ArticlePostPage
         }
     }
 

@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {ArticleListPage} from '../article-list/article-list';
+import {ArticlePostPage} from '../article-post/article-post';
 
 @Component({
     selector: 'page-welcome',
@@ -18,5 +19,10 @@ export class WelcomePage {
 
     openArticleList() {
         this.navCtrl.push(ArticleListPage);
+    }
+
+    openArticlePost() {
+        console.log(ArticlePostPage);
+        this.navCtrl.push(ArticlePostPage);
     }
 }

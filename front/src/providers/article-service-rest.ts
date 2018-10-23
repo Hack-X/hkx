@@ -47,4 +47,8 @@ export class ArticleService {
         }
         return Promise.resolve();
     }
+
+    create(data) {
+        return this.http.post(showsURL, data).toPromise();
+    }
 }

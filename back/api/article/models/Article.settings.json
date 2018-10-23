@@ -43,6 +43,11 @@
       "default": 0,
       "type": "integer",
       "required": true
+    },
+    "Date de l'article": {
+      "default": "",
+      "type": "date",
+      "required": true
     }
   }
 }

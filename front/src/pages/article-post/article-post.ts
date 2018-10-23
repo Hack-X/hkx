@@ -2,41 +2,25 @@ import {Component, ViewChild} from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 import {UserService} from "../../providers/user-service-rest";
 import {WelcomePage} from "../welcome/welcome";
+import {ArticleService} from "../../providers/article-service-rest";
 
 @Component({
-    selector: 'page-login',
-    templateUrl: 'login.html'
+    selector: 'article-post',
+    templateUrl: 'article-post.html'
 })
-export class LoginPage {
-  @ViewChild(Slides) slides: Slides;
 
-    identifier: string = "";
-    password: string = "";
-    errorDescription: any = { message: '' };
+export class ArticlePostPage {
 
-    constructor(public navCtrl: NavController, public userService: UserService) {
+    constructor(public navCtrl: NavController, public service: ArticleService) {
     }
 
-    ngAfterViewInit() {
-        let jwt = window.localStorage.getItem('jwt');
-        if (jwt) {
-            this.navCtrl.setRoot(WelcomePage);
-        }
+
+    article = {}
+    logForm() {
+    console.log(this.article)
     }
 
-    login() {
-        let navCtrl = this.navCtrl;
-        let errorDescription = this.errorDescription;
-        this.userService.login(this.identifier, this.password).then(
-            function(auth) {
-                localStorage.setItem('jwt', auth.jwt);
-                navCtrl.setRoot(WelcomePage)
-            },
-            function(err) {
-                let payload = JSON.parse(err._body);
-                errorDescription.message = payload.message;
-            }
-        );
+    submitForm() {
+        this.service.create(this.article)
     }
-
 }

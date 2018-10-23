@@ -17,6 +17,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ArticleListPage } from '../pages/article-list/article-list';
 
+import { ArticlePostPage } from '../pages/article-post/article-post';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -25,7 +27,8 @@ import { ArticleListPage } from '../pages/article-list/article-list';
     ArticleDetailPage,
     FavoriteListPage,
     LoginPage,
-    ArticleListPage
+    ArticleListPage,
+    ArticlePostPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { ArticleListPage } from '../pages/article-list/article-list';
     ArticleDetailPage,
     FavoriteListPage,
     LoginPage,
-    ArticleListPage
+    ArticleListPage,
+    ArticlePostPage
   ],
   providers: [
     StatusBar,

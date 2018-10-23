@@ -24,7 +24,8 @@ export class ArticleListPage {
         this.findAll();
     }
 
-    openarticleDetail(article: any) {
+    openArticleDetail(article: any) {
+        console.log(article);
         this.navCtrl.push(ArticleDetailPage, article);
     }
 
@@ -52,6 +53,7 @@ export class ArticleListPage {
             .then(data => {
                 this.articles = data;
                 this.articlesForSearch = data;
+                console.log(this.articles);
             })
             .catch(error => alert(error));
     }
@@ -73,7 +75,7 @@ export class ArticleListPage {
         this.markersGroup = leaflet.layerGroup([]);
         this.articles.forEach(article => {
             if (article.lat, article.lng) {
-                let marker: any = leaflet.marker([article.lat, article.lng]).on('click', event => this.openarticleDetail(event.target.data));
+                let marker: any = leaflet.marker([article.lat, article.lng]).on('click', event => this.openArticleDetail(event.target.data));
                 marker.data = article;
                 this.markersGroup.addLayer(marker);
             }
